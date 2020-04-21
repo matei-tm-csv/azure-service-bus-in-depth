@@ -1,0 +1,18 @@
+
+az servicebus -h
+
+az find "az servicebus namespace create"
+
+az servicebus namespace create --resource-group ServiceBusInDepth --name sbindepth01 --location westeurope
+
+az servicebus queue create --name queue1 --namespace-name sbindepth01 --resource-group ServiceBusInDepth
+az servicebus queue create --name queue2 --namespace-name sbindepth01 --resource-group ServiceBusInDepth
+az servicebus queue create --name queue3 --namespace-name sbindepth01 --resource-group ServiceBusInDepth
+
+az servicebus topic create --name topic1 --namespace-name sbindepth01 --resource-group ServiceBusInDepth
+
+az servicebus topic subscription create --name subscription1 --topic-name topic1 --namespace-name sbindepth01 --resource-group ServiceBusInDepth
+az servicebus topic subscription create --name subscription2 --topic-name topic1 --namespace-name sbindepth01 --resource-group ServiceBusInDepth
+az servicebus topic subscription create --name subscription3 --topic-name topic1 --namespace-name sbindepth01 --resource-group ServiceBusInDepth
+
+
